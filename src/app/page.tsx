@@ -1,5 +1,6 @@
 "use client";
 
+import FAQPage from "@/components/section/FAQPage";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { CiUser } from "react-icons/ci";
@@ -189,6 +190,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* FAQ Section */}
+      <FAQPage />
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

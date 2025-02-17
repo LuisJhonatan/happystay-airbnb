@@ -70,3 +70,15 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.triangle {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid #0033FF;
+}
