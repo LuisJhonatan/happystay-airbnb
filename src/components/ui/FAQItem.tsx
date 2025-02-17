@@ -17,7 +17,7 @@ export default function FAQItem({
         className="w-full py-6 text-left font-bold flex justify-between items-center focus:outline-none"
         onClick={onClick}
       >
-        <span className="text-lg ">{question}</span>
+        <span className=" md:text-lg">{question}</span>
         <ArrowDownFromLine
           className={`w-5 h-5 transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""

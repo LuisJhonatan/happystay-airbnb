@@ -19,7 +19,7 @@ export default function FAQPage() {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-secondary px-4 text-primaryText">
+      <div className="flex items-center justify-center min-h-screen bg-secondary p-4">
         <div className="">
           <div className="max-w-[1200px] text-center mb-12 mx-auto">
             <h1
@@ -55,7 +55,7 @@ export default function FAQPage() {
       <div className="w-full h-4 bg-primary relative ">
         <div className="triangle">
           <ChevronsUp
-            className="w-12 h-12 absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
+            className="w-12 h-12 absolute left-1/2 transform -translate-x-1/2 cursor-pointer text-primaryText"
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               router.push("/");
