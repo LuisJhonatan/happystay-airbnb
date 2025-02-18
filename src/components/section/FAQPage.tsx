@@ -18,8 +18,9 @@ export default function FAQPage() {
   };
 
   return (
-    <>
-      <div className="flex items-center justify-center min-h-screen bg-secondary p-4">
+    <section
+    id="FAQ">
+      <div className="text-primaryText flex items-center justify-center min-h-screen bg-secondary p-4">
         <div className="">
           <div className="max-w-[1200px] text-center mb-12 mx-auto">
             <h1
@@ -63,6 +64,6 @@ export default function FAQPage() {
           />{" "}
         </div>
       </div>
-    </>
+    </section>
   );
 }

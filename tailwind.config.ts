@@ -46,6 +46,7 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
         primaryText: "#2C3E50",
+        secondaryText: "rgba(44, 62, 80, 0.5)",
       },
       borderRadius: {
         lg: "var(--radius)",
