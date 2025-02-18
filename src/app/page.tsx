@@ -4,16 +4,17 @@ import ContactPage from "@/components/section/ContactPage";
 import FAQPage from "@/components/section/FAQPage";
 import Footer from "@/components/section/Footer";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { CiUser } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
 import { FiMessageSquare } from "react-icons/fi";
+import HomeSection from "@/components/section/HomeSection";
 
 export default function Home() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <main className="min-h-screen">
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
@@ -54,32 +55,8 @@ export default function Home() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section id="home" className="pt-20">
-        <div className="relative h-screen">
-          <Image
-            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-            alt="Luxury apartment"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-              <div className="text-white">
-                <h1 className="text-5xl font-bold mb-4">
-                  Bienvenidos a HappyStay
-                </h1>
-                <p className="text-xl mb-8">
-                  Encuentra el AirBnb perfecto para tu próxima aventura.
-                </p>
-                <Button size="lg" onClick={() => scrollToSection("contact")}>
-                  Contáctanos
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <HomeSection scrollToSection={scrollToSection} />
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
