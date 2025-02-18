@@ -22,7 +22,7 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
             src="/images/imagen-depa-1.jpg"
             alt="Luxury apartment interior"
             fill
-            className="w-full  h-full object-cover brightness-75 group-hover:scale-110 transition-all duration-500 group-hover:brightness-100"
+            className="w-full h-full object-cover brightness-75 group-hover:scale-110 transition-all duration-500 group-hover:brightness-100"
           />
           <div className="absolute inset-0  bg-black/50 transition-all duration-500 group-hover:bg-none"></div>
         </div>
@@ -40,7 +40,7 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
       <div className="md:hidden relative w-full h-screen">
         <div
           className="absolute inset-0 overflow-hidden"
-          style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+          style={{ clipPath: "polygon(0 0, 170% 0, 0 100%)" }}
         >
           <Image
             src="/images/imagen-depa-1.jpg"
@@ -53,7 +53,7 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
 
         <div
           className="absolute inset-0 overflow-hidden"
-          style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+          style={{ clipPath: "polygon(100% 40%, 100% 100%, -60% 100%)" }}
         >
           <Image
             src="/images/imagen-depa-2.jpg"
