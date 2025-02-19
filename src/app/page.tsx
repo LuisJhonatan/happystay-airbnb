@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/section/About";
+import AirbnbPage from "@/components/section/AirbnbPage";
 import ContactPage from "@/components/section/ContactPage";
 import FAQPage from "@/components/section/FAQPage";
 import Footer from "@/components/section/Footer";
@@ -20,10 +21,8 @@ export default function Home() {
       <HomeSection scrollToSection={scrollToSection} />
       {/* About Section */}
       <About />
-
-      {/* Testimonials Section */}
-      <section id="airbnbs" className="h-screen flex items-center justify-center">
-        <h1 className="text-2xl">Esta seccion está en proceso</h1>
+      {/* Airbnb Section */}
+      <AirbnbPage />
       {/* <div className="w-full h-8 bg-primary "></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +52,6 @@ export default function Home() {
             ))}
           </div>
         </div> */}
-      </section>
       {/* Contact Section */}
       <ContactPage />
       {/* FAQ Section */}
