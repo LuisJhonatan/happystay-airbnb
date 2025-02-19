@@ -4,29 +4,31 @@ const lobster = Lobster({ weight: "400", subsets: ["latin"] });
 
 export default function About() {
   return (
-    <section className="relative pt-40">
+    <section
+      id="about"
+      className="p-4 min-h-screen bg-secondary relative flex items-center justify-center"
+    >
       {/* Imagen de fondo en la parte superior */}
-      <div className="absolute top-0 left-0 right-0 h-1/4 lg:h-1/2 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[30%] lg:h-1/2 overflow-hidden">
+        <div className="w-full h-8 bg-primary absolute top-0 z-10"></div>
         <Image
           src="/images/imagen-nosotros.jpg"
           alt="Luxury apartment interior"
           fill
           className="object-cover"
         />
+        <div className="max-w-7xl relative top-1/2 z-10 mx-auto px-4">
+          <h1
+            className={`text-3xl md:text-6xl lg:text-8xl xl:text-9xl text-white ${lobster.className}`}
+          >
+            HappyStay
+          </h1>
+        </div>
         <div className="absolute inset-0 bg-black/50 "></div>
       </div>
 
-      {/* Fondo blanco en la parte inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/4 lg:h-1/2 bg-white"></div>
-      <div>
-        <h1
-          className={`relative text-4xl lg:text-8xl -top-14 text-white ml-14 ${lobster.className}`}
-        >
-          HappyStay
-        </h1>
-      </div>
       {/* Contenedor principal */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-[50%] md:mt-[25%] xl:mt-[20%] 2xl:mt-[15%]">
         {/* Bloque de descripción */}
         <div className="bg-white p-1 shadow-xl bg-opacity-60">
           <div className="bg-blue-600 w-full bg-opacity-80 text-white px-6 py-10 text-2xl font-semibold rounded-md shadow-md inline-block mb-6">
@@ -55,6 +57,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div></div>
     </section>
   );
 }

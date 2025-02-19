@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Lobster } from "next/font/google";
+import { Lobster, Roboto } from "next/font/google";
 import { HiChevronDoubleRight, HiChevronRight } from "react-icons/hi2";
 import { useState } from "react";
 
@@ -9,14 +9,18 @@ export type HomeSectionProps = {
 };
 
 const lobster = Lobster({ weight: "400", subsets: ["latin"] });
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export default function HomeSection({ scrollToSection }: HomeSectionProps) {
   const [hover, setHover] = useState(false);
 
   return (
-    <section id="home" className="relative w-full h-screen">
+    <section
+      id="home"
+      className={`relative w-full h-screen ${roboto.className}`}
+    >
       {/* Desktop view: Two split images */}
-      <div className="hidden md:grid grid-cols-2 h-full">
+      <div className="hidden md:grid grid-cols-2 h-full relative z-10">
         <div className="relative w-full h-full overflow-hidden group">
           <Image
             src="/images/imagen-depa-1.jpg"
@@ -66,26 +70,26 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
       </div>
 
       {/* Content overlay */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+      <div className="absolute inset-0 flex items-center justify-center ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-20">
           <h1
             className={`text-white text-6xl md:text-8xl font-bold mb-4 ${lobster.className} text-center`}
           >
             HappyStay
           </h1>
           <div className="flex flex-col items-end text-white   w-full lg:max-w-4xl">
-            <span className="lg:text-xl  text-sm font-mono font-bold text-right">
+            <span className="lg:text-xl md:text-lg  text-sm font-bold text-right">
               ¡Bienvenido a HappyStay!
             </span>
-            <span className="lg:text-xl text-sm font-mono text-right">
+            <span className="lg:text-xl md:text-lg text-sm text-right">
               Encuentra el Airbnb perfecto para tu próxima aventura.
             </span>
-            <span className="lg:text-xl text-sm font-mono text-right">
+            <span className="lg:text-xl md:text-lg text-sm text-right">
               Ofrecemos alojamientos cómodos, bien ubicados y diseñados para que
               disfrutes una estancia inolvidable.
             </span>
             <Button
-              className="hover:bg-primary mt-3 rounded-lg text-sm py-3 lg:text-xl  bg-white text-primary hover:text-white "
+              className="hover:bg-primary mt-3 rounded-lg text-sm py-3 lg:text-xl bg-white text-primary hover:text-white "
               onClick={() => scrollToSection("contact")}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}

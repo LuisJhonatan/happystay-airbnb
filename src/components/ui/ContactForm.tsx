@@ -1,15 +1,20 @@
 import { Mail } from "lucide-react";
 import { useForm } from "react-hook-form";
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<ContactFormData>();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data : ContactFormData) => {
     console.log(data);
   };
 

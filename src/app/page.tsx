@@ -19,11 +19,13 @@ export default function Home() {
       {/* Hero Section */}
       <HomeSection scrollToSection={scrollToSection} />
       {/* About Section */}
-      <div id="about" className="w-full h-8 bg-blue-700"></div>
       <About />
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-52">
+      <section id="airbnbs" className="h-screen flex items-center justify-center">
+        <h1 className="text-2xl">Esta seccion está en proceso</h1>
+      {/* <div className="w-full h-8 bg-primary "></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Lo que dicen nuestros huéspedes
@@ -50,7 +52,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
       {/* Contact Section */}
       <ContactPage />

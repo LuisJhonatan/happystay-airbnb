@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { Lobster } from "next/font/google";
+import { Lobster, Roboto } from "next/font/google";
 
 export type NavProps = {
   scrollToSection: (section: string) => void;
 };
+
 const lobster = Lobster({ weight: "400", subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Nav({ scrollToSection }: NavProps) {
   const [activeSection, setActiveSection] = useState<string>("home");
@@ -37,7 +39,7 @@ export default function Nav({ scrollToSection }: NavProps) {
           </div>
 
           {/* Menú de Navegación */}
-          <div className="hidden md:block text-lg">
+          <div className={`hidden md:block text-lg ${roboto.className}`}>
             <div className="flex items-center space-x-4">
               {["home", "about", "airbnbs", "contact", "faq"].map((section) => (
                 <Button
@@ -50,7 +52,7 @@ export default function Nav({ scrollToSection }: NavProps) {
                   }`}
                   onClick={() => handleNavClick(section)}
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section === "faq" ? section.toUpperCase() : section.charAt(0).toUpperCase() + section.slice(1)}
                 </Button>
               ))}
             </div>
@@ -89,7 +91,7 @@ export default function Nav({ scrollToSection }: NavProps) {
           isMenuOpen ? "block" : "hidden"
         } transition-all duration-300 ease-in-out `}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3  ">
+        <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${roboto.className}`}>
           {["home", "about", "airbnbs", "contact", "faq"].map((section) => (
             <Button
               key={section}
