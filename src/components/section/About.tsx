@@ -35,23 +35,23 @@ export default function About() {
             Sobre nosotros
           </div>
           <div className="p-8">
-            <p className="text-gray-700 text-right text-sm lg:text-lg ">
+            <p className="text-primaryText text-right text-sm lg:text-lg ">
               En HappyStay, nos especializamos en ofrecer experiencias de
               alojamiento inolvidables. Nuestro objetivo es brindarte espacios
               cómodos, bien ubicados y totalmente equipados para que disfrutes
               de tu estadía como si estuvieras en casa.
             </p>
-            <p className="text-gray-700 text-sm lg:text-lg text-right">
+            <p className="text-primaryText text-sm lg:text-lg text-right">
               Cada una de nuestras propiedades está cuidadosamente seleccionada
               para garantizar confort, estilo y funcionalidad. Ya sea que viajes
               por placer o por trabajo, en HappyStay encontrarás el lugar ideal
               para descansar y disfrutar al máximo.
             </p>
-            <p className="text-gray-700 text-sm lg:text-lg text-right">
+            <p className="text-primaryText text-sm lg:text-lg text-right">
               Nos comprometemos a brindarte una experiencia sin preocupaciones,
               con atención personalizada y un proceso de reserva fácil y seguro.
             </p>
-            <p className="text-black font-semibold text-sm lg:text-lg text-right">
+            <p className="text-primaryText font-bold text-sm lg:text-lg text-right">
               ¡Tu próxima aventura comienza aquí!
             </p>
           </div>

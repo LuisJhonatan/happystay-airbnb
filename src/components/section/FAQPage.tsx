@@ -24,7 +24,7 @@ export default function FAQPage() {
         <div className="">
           <div className="max-w-[1200px] text-center mb-12 mx-auto">
             <h1
-              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${georama.className}`}
+              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 pt-24 md:pt-0 ${georama.className}`}
             >
               Preguntas frecuentes
             </h1>

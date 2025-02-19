@@ -21,15 +21,15 @@ export default function Nav({ scrollToSection }: NavProps) {
 
   return (
     <nav className="fixed top-0 w-full bg-white z-50 shadow-sm">
-      <div className="w-full h-8 bg-blue-700"></div>
+      <div className="w-full h-8 bg-primary"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16 relative">
           <div className="relative">
             <div
               style={{
-                clipPath: "polygon(50% 100%, 100% 60%, 100% 0, 0 0, 0 60%)",
+                clipPath: "polygon(50% 80%, 100% 60%, 100% 0, 0 0, 0 60%)",
               }}
-              className="absolute -top-9 left-0 bg-blue-700 px-6 py-3 w-28 text-white font-bold h-28"
+              className="absolute -top-9 left-0 bg-primary px-6 py-3 w-28 text-white font-bold h-28"
             ></div>
             <span
               className={`absolute ${lobster.className} -top-4 left-1 text-white font-bold text-2xl`}
@@ -47,8 +47,8 @@ export default function Nav({ scrollToSection }: NavProps) {
                   variant="ghost"
                   className={`text-lg ${
                     activeSection === section
-                      ? "text-blue-700 font-bold"
-                      : "text-black hover:font-bold"
+                      ? "text-primary font-bold"
+                      : "text-primaryText hover:font-bold"
                   }`}
                   onClick={() => handleNavClick(section)}
                 >
@@ -98,8 +98,8 @@ export default function Nav({ scrollToSection }: NavProps) {
               variant="ghost"
               className={`block w-full text-right text-lg ${
                 activeSection === section
-                  ? "text-blue-700 font-bold"
-                  : "text-black hover:font-bold"
+                  ? "text-primary font-bold"
+                  : "text-primaryText hover:font-bold"
               }`}
               onClick={() => handleNavClick(section)}
             >

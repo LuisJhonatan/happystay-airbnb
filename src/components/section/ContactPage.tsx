@@ -35,9 +35,12 @@ export default function ContactPage() {
                 <p className="text-primaryText text-base sm:text-lg md:text-xl">
                   Email
                 </p>
-                <p className="text-secondaryText text-base sm:text-lg md:text-xl">
+                <a
+                  href="mailto:contacto@happystay.pe"
+                  className="text-secondaryText text-base sm:text-lg md:text-xl"
+                >
                   contacto@happystay.pe
-                </p>
+                </a>
               </div>
             </div>
 
@@ -49,9 +52,12 @@ export default function ContactPage() {
                 <p className="text-primaryText text-base sm:text-lg md:text-xl">
                   Email
                 </p>
-                <p className="text-secondaryText text-base sm:text-lg md:text-xl">
+                <a
+                  href="mailto:wsmith@happystay.pe"
+                  className="text-secondaryText text-base sm:text-lg md:text-xl"
+                >
                   wsmith@happystay.pe
-                </p>
+                </a>
               </div>
             </div>
 
@@ -63,9 +69,12 @@ export default function ContactPage() {
                 <p className="text-primaryText text-base sm:text-lg md:text-xl">
                   Teléfono
                 </p>
-                <p className="text-secondaryText text-base sm:text-lg md:text-xl">
-                  999999999
-                </p>
+                <a
+                  href="tel:+51999999999"
+                  className="text-secondaryText text-base sm:text-lg md:text-xl"
+                >
+                  +51 999999999
+                </a>
               </div>
             </div>
 
