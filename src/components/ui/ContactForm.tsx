@@ -11,13 +11,8 @@ export default function ContactForm() {
   const email = process.env.NEXT_PUBLIC_EMAIL;
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm<ContactFormData>();
-
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-  };
 
   return (
     <div className="w-full bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8">
