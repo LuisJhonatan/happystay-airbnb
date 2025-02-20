@@ -14,7 +14,7 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm<ContactFormData>();
 
-  const onSubmit = (data : ContactFormData) => {
+  const onSubmit = (data: ContactFormData) => {
     console.log(data);
   };
 
@@ -23,8 +23,15 @@ export default function ContactForm() {
       <h2 className="text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium mb-8">
         Contáctanos
       </h2>
-      <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="space-y-6"
+        action="https://formsubmit.co/a1f814e4de679fd20a3d300069daabd0"
+        method="POST"
+        target="_blank"
+      >
         <div>
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
           <label
             htmlFor="name"
             className="block text-sm md:text-base lg:text-lg xl:text-xl mb-2"
@@ -34,11 +41,14 @@ export default function ContactForm() {
           <input
             type="text"
             id="name"
+            required
             className="w-full p-3 bg-gray-100 rounded-md"
             {...register("name", { required: "Este campo es obligatorio" })}
           />
           {errors.name && (
-            <p className="text-red-500 text-sm">{String(errors.name.message)}</p>
+            <p className="text-red-500 text-sm">
+              {String(errors.name.message)}
+            </p>
           )}
         </div>
 
@@ -69,7 +79,9 @@ export default function ContactForm() {
             })}
           />
           {errors.email && (
-            <p className="text-red-500 text-sm">{String(errors.email.message)}</p>
+            <p className="text-red-500 text-sm">
+              {String(errors.email.message)}
+            </p>
           )}
         </div>
 
@@ -87,7 +99,9 @@ export default function ContactForm() {
             {...register("message", { required: "Este campo es obligatorio" })}
           />
           {errors.message && (
-            <p className="text-red-500 text-sm">{String(errors.message.message)}</p>
+            <p className="text-red-500 text-sm">
+              {String(errors.message.message)}
+            </p>
           )}
         </div>
 

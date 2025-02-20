@@ -7,6 +7,11 @@ export default function About() {
     <section
       id="about"
       className="p-4 min-h-screen bg-secondary relative flex items-center justify-center"
+      style={{
+        backgroundImage: "url('/images/fondo-contacto.jpg')",
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+      }}
     >
       {/* Imagen de fondo en la parte superior */}
       <div className="absolute top-0 left-0 right-0 h-[30%] lg:h-1/2 overflow-hidden">
@@ -17,7 +22,7 @@ export default function About() {
           fill
           className="object-cover"
         />
-        <div className="max-w-7xl relative top-1/2 z-10 mx-auto px-4">
+        <div className="bgimage max-w-7xl relative top-1/2 md:top-1/4 z-10 mx-auto px-4">
           <h1
             className={`text-3xl md:text-6xl lg:text-8xl xl:text-9xl text-white ${lobster.className}`}
           >
@@ -57,7 +62,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div></div>
     </section>
   );
 }

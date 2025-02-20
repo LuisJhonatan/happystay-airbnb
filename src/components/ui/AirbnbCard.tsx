@@ -18,6 +18,7 @@ import {
 import { Button } from "./button";
 import { useState } from "react";
 import { ImageCarousel } from "./ImageCarousel";
+import { event } from "@/lib/pixel";
 
 interface Service {
   icon: string;
@@ -42,13 +43,18 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } =
     Fence: Fence,
     AirVent: AirVent,
     Rows4: Rows4,
-    Sun : Sun,
+    Sun: Sun,
     Shirt: Shirt,
     Coffee: Coffee,
   };
 
 export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+  const handleAirbnbClick = () => {
+    event("airbnb_click", { airbnb_name: airbnb.name });
+
+    window.open(airbnb.link, "_blank");
+  };
 
   return (
     <>
@@ -87,10 +93,7 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
             })}
           </div>
           <div className="flex items-end justify-center mt-4">
-            <Button
-              className=" text-white"
-              onClick={() => window.open(airbnb.link, "_blank")}
-            >
+            <Button className=" text-white" onClick={handleAirbnbClick}>
               Ir al Airbnb...
             </Button>
           </div>
