@@ -5,28 +5,33 @@ interface FAQItem {
 
 export const FAQ_DATA: FAQItem[] = [
   {
-    question: "¿Cuáles son los métodos de pago aceptados?",
+    question: "¿A qué hora es el check-in y el check-out?",
     answer:
-      "Aceptamos múltiples métodos de pago incluyendo tarjetas de crédito/débito (Visa, MasterCard, American Express), PayPal, y transferencias bancarias. Todos los pagos se procesan de manera segura a través de nuestras plataformas certificadas.",
+      "El check-in es a las 11:00am y el check-out es a las 03:00pm. Es posible ser flexible con el horario, pero según la disponibilidad que tengamos, pregunta en interno.",
   },
   {
-    question: "¿Cuál es el tiempo de respuesta para las consultas?",
+    question: "¿El alojamiento tiene WiFi?",
     answer:
-      "Nos comprometemos a responder todas las consultas en un plazo máximo de 24 horas hábiles. Para casos urgentes, contamos con atención prioritaria que garantiza una respuesta en menos de 4 horas.",
+      "Si tenemos WIFI en ambos departamentos, verifica en el link que compartimos para ti con esa información.",
   },
   {
-    question: "¿Ofrecen servicios internacionales?",
+    question: "¿Hay estacionamiento disponible?",
     answer:
-      "Sí, ofrecemos servicios internacionales en más de 50 países. Nuestro equipo multilingüe está preparado para atender clientes globalmente, adaptándonos a diferentes zonas horarias y requerimientos específicos de cada región.",
+      "Ambos departamentos cuentan con un estacionamiento libre para ustedes, sin embargo, si quieres estacionamientos adicionales debes estacionar frente al edificio. No te preocupes, toda la zona está vigilada.",
   },
   {
-    question: "¿Cómo garantizan la confidencialidad de la información?",
+    question: "¿Hay horarios de silencio?",
     answer:
-      "Implementamos protocolos de seguridad de nivel bancario, incluyendo encriptación SSL/TLS, almacenamiento seguro de datos y políticas estrictas de privacidad. Cumplimos con regulaciones internacionales de protección de datos como GDPR.",
+      "Los días de semana (domingo a jueves) se puede hacer ruido hasta las 11:00pm, sino serán penalizados. Los fines de semana (viernes y sábado) se puede hacer ruido hasta la 1:00am, sino serán penalizados. multa (S/500.00).",
   },
   {
-    question: "¿Cuál es el proceso de trabajo típico?",
+    question: "¿Está permitido hacer fiestas o eventos?",
     answer:
-      "Nuestro proceso se divide en 4 fases: consulta inicial, planificación detallada, ejecución del proyecto y revisión final. Cada fase incluye puntos de control y aprobación del cliente para garantizar la satisfacción con los resultados.",
+      "No está permitido, multa (S/500.00).",
+  },
+  {
+    question: "¿Dónde está ubicado el alojamiento?",
+    answer:
+      "En Punta Hermosa Playa Señoritas y Caballeros, verifica en el link que compartimos para ti con esa información.",
   },
 ];

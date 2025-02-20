@@ -32,9 +32,6 @@ export default function Home() {
       <Nav scrollToSection={scrollToSection} />
       {/* Hero Section */}
       <HomeSection scrollToSection={scrollToSection} />
-
-      {/* About Section */}
-      <About />
       {/* Airbnb Section */}
       <AirbnbPage />
       {/* About Section */}
@@ -47,7 +44,7 @@ export default function Home() {
       <Footer scrollToSection={scrollToSection} />
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/51935064473"
+        href="https://wa.me/51989856864"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-all z-50 flex items-center justify-center"

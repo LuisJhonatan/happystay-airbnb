@@ -7,11 +7,6 @@ export default function About() {
     <section
       id="about"
       className="p-4 min-h-screen bg-secondary relative flex items-center justify-center"
-      style={{
-        backgroundImage: "url('/images/fondo-contacto.jpg')",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "center",
-      }}
     >
       {/* Imagen de fondo en la parte superior */}
       <div className="absolute top-0 left-0 right-0 h-[30%] lg:h-1/2 overflow-hidden">

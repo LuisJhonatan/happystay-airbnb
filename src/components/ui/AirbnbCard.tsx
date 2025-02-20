@@ -62,10 +62,7 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
         <h2 className="text-xl lg:text-2xl font-semibold">{airbnb.name}</h2>{" "}
       </div>
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 pb-8 px-4 items-center lg:items-start ">
-        <div
-          className="w-10/12 lg:w-1/2 rounded-xl shadow-xl cursor-pointer overflow-hidden"
-          onClick={() => setIsCarouselOpen(true)}
-        >
+        <div className="w-10/12 lg:w-1/2 rounded-xl shadow-xl overflow-hidden">
           <Image
             src={airbnb.images[2]}
             alt={airbnb.name}
@@ -92,8 +89,14 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
               );
             })}
           </div>
-          <div className="flex items-end justify-center mt-4">
-            <Button className=" text-white" onClick={handleAirbnbClick}>
+          <div className="flex gap-8 mt-4">
+            <Button
+              className=" text-white"
+              onClick={() => setIsCarouselOpen(true)}
+            >
+              Ver fotos...
+            </Button>
+            <Button className=" text-white " onClick={handleAirbnbClick}>
               Ir al Airbnb...
             </Button>
           </div>

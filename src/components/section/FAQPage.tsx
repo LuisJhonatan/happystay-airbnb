@@ -15,7 +15,8 @@ export default function FAQPage() {
   };
 
   return (
-    <section id="faq">
+    <section id="faq" className="relative">
+      <div className="w-full h-8 absolute top-0 bg-primary "></div>
       <div className="text-primaryText flex items-center justify-center min-h-screen bg-secondary p-4">
         <div className="">
           <div className="max-w-[1200px] text-center mb-12 mx-auto">

@@ -9,15 +9,10 @@ export default function ContactPage() {
   return (
     <section
       id="contact"
-      className={`min-h-screen relative p-4 flex items-center justify-center ${roboto.className}`}
-      style={{
-        backgroundImage: "url('/images/fondo-contacto.jpg')",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "center",
-      }}
+      className={`min-h-screen bg-secondary relative p-4 flex items-center justify-center ${roboto.className}`}
     >
       <div className="max-w-[1200px] flex flex-col lg:flex-row  items-center lg:justify-around relative z-10 mx-auto lg:grid md:grid-cols-2 lg:gap-8">
-        <div className=" space-y-8">
+        <div className="py-4 space-y-8">
           <Image
             src="/images/imagen-contacto.png"
             alt="Pareja trabajando junta"
@@ -130,7 +125,7 @@ export default function ContactPage() {
 
         <ContactForm />
       </div>
-      <div className="w-full h-8 absolute bottom-0 bg-primary "></div>
+      <div className="w-full h-8 absolute top-0 bg-primary "></div>
     </section>
   );
 }
