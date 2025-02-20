@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   TreePalm,
@@ -10,6 +11,8 @@ import {
   HelpCircle, // Importa el ícono por defecto
 } from "lucide-react";
 import { Button } from "./button";
+import { useState } from "react";
+import { ImageCarousel } from "./ImageCarousel";
 
 interface Service {
   icon: string;
@@ -35,20 +38,24 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } =
   };
 
 export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
-  console.log(airbnb.name);
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 mb-4">
         <h2 className="text-xl lg:text-2xl font-semibold">{airbnb.name}</h2>{" "}
       </div>
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 pb-8 px-4 items-center lg:items-start ">
-        <div className="w-10/12 lg:w-1/2">
+        <div
+          className="w-10/12 lg:w-1/2 rounded-xl shadow-xl cursor-pointer overflow-hidden"
+          onClick={() => setIsCarouselOpen(true)}
+        >
           <Image
-            src={airbnb.images[0]}
+            src={airbnb.images[2]}
             alt={airbnb.name}
             width={500}
             height={500}
-            className="w-full h-auto rounded-xl shadow-lg"
+            className="w-full h-auto rounded-xl shadow-lg transition-transform duration-300 lg:hover:scale-125"
             priority
           />
         </div>
@@ -79,6 +86,11 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
           </div>
         </div>
       </div>
+      <ImageCarousel
+        images={airbnb.images}
+        isOpen={isCarouselOpen}
+        onClose={() => setIsCarouselOpen(false)}
+      />
     </>
   );
 }

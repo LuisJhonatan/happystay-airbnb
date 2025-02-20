@@ -41,7 +41,7 @@ export default function Nav({ scrollToSection }: NavProps) {
           {/* Menú de Navegación */}
           <div className={`hidden md:block text-lg ${roboto.className}`}>
             <div className="flex items-center space-x-4">
-              {["home", "about", "airbnbs", "contact", "faq"].map((section) => (
+              {["home", "airbnbs", "about", "contact", "faq"].map((section) => (
                 <Button
                   key={section}
                   variant="ghost"
@@ -52,7 +52,9 @@ export default function Nav({ scrollToSection }: NavProps) {
                   }`}
                   onClick={() => handleNavClick(section)}
                 >
-                  {section === "faq" ? section.toUpperCase() : section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section === "faq"
+                    ? section.toUpperCase()
+                    : section.charAt(0).toUpperCase() + section.slice(1)}
                 </Button>
               ))}
             </div>
@@ -92,7 +94,7 @@ export default function Nav({ scrollToSection }: NavProps) {
         } transition-all duration-300 ease-in-out `}
       >
         <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${roboto.className}`}>
-          {["home", "about", "airbnbs", "contact", "faq"].map((section) => (
+          {["home", "airbnbs", "about", "contact", "faq"].map((section) => (
             <Button
               key={section}
               variant="ghost"
@@ -103,7 +105,9 @@ export default function Nav({ scrollToSection }: NavProps) {
               }`}
               onClick={() => handleNavClick(section)}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section === "faq"
+                ? section.toUpperCase()
+                : section.charAt(0).toUpperCase() + section.slice(1)}
             </Button>
           ))}
         </div>

@@ -19,7 +19,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-5">
+    <div className="w-full bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8">
       <h2 className="text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium mb-8">
         Contáctanos
       </h2>

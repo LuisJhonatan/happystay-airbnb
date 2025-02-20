@@ -71,14 +71,16 @@ body {
   }
 }
 
-.triangle {
-  position: absolute;
-  top: -38px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 40px solid #0033ff;
+.slick-dots-custom li {
+  margin: 0 8px;
+}
+
+.slick-dots-custom li button:before {
+  color: white !important;
+  opacity: 1;
+}
+
+.slick-dots-custom li.slick-active button:before {
+  color: white !important;
+  font-size: 12px; /* Tamaño aún mayor para el activo */
 }

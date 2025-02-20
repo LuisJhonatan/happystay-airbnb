@@ -3,15 +3,12 @@ import { useState } from "react";
 import FAQItem from "../ui/FAQItem";
 import { FAQ_DATA } from "@/data/FAQ";
 import { Georama, Roboto } from "next/font/google";
-import { ChevronsUp } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const georama = Georama({ subsets: ["latin"], weight: ["400", "700"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const router = useRouter();
 
   const handleClick = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -20,7 +17,7 @@ export default function FAQPage() {
   return (
     <section
     id="faq">
-      <div className="text-primaryText flex items-center justify-center min-h-screen bg-secondary p-4">
+      <div className="text-primaryText flex items-center justify-center min-h-screen bg-secondary p-4 pb-10">
         <div className="">
           <div className="max-w-[1200px] text-center mb-12 mx-auto">
             <h1
@@ -51,17 +48,6 @@ export default function FAQPage() {
               />
             ))}
           </div>
-        </div>
-      </div>
-      <div className="w-full h-4 bg-primary relative ">
-        <div className="triangle">
-          <ChevronsUp
-            className="w-12 h-12 absolute left-1/2 transform -translate-x-1/2 cursor-pointer text-primaryText"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              router.push("/");
-            }}
-          />{" "}
         </div>
       </div>
     </section>
