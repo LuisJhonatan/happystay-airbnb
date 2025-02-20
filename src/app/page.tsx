@@ -23,11 +23,6 @@ export default function Home() {
   return (
     <main
       className="min-h-screen"
-      style={{
-        backgroundImage: "url('/images/fondo-contacto.jpg')",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "center",
-      }}
     >
       <Nav scrollToSection={scrollToSection} />
       {/* Hero Section */}
