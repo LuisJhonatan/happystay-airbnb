@@ -13,9 +13,9 @@ export const TESTIMONIALS: Testimonial[] = [
       "/images/clients/client-1.jpg",
   },
   {
-    name: "David",
+    name: "David Bermudez",
     coment:
-      "Excelente ubicación, todo estaba limpio y funcional. Faltaba la máquina de café, pero le informé a William y me dijo que ya se había pedido una nueva. La zona exterior tiene vistas a la playa y tiene una vista perfecta de la puesta de sol. Si tiendes a hacer frío mientras duermes, te recomiendo que traigas mantas, ya que había una sábana en la cama.",
+      "Es un buen lugar para pasar en familia o amistades como mi caso. La pasé con mi novia y amigos. Todo perfecto desde el check in el conserje amable William atento en todo momento cuando le escribía sobre recomendaciones de algunos lugares cerca. Departamento todo bien limpio y ordenado. Fácil de llegar. Volvería a reservar para mi próxima visita.",
     image:
       "/images/clients/client-2.jpg",
   },

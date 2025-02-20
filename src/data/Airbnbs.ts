@@ -30,29 +30,44 @@ export const AIRBNBS: Airbnb[] = [
         description: "Acceso a la playa - Frente a la playa",
       },
       {
-        icon: "Wifi",
-        description: "Wifi",
+        icon: "AirVent",
+        description: "Aire Acondicionado Cuarto Principal",
       },
       {
-        icon: "CarFront",
-        description: "Descripción del servicio 3",
+        icon: "Rows4",
+        description: "Parrilla",
+      },
+      {
+        icon: "Sun",
+        description: "Terraza",
       },
       {
         icon: "Video",
-        description:
-          "Cámaras de seguridad en la parte exterior de la propiedad",
+        description: "Seguridad garantizada en el edificio",
       },
       {
         icon: "CookingPot",
-        description: "Cocina",
+        description: "Cocina Equipada",
       },
       {
         icon: "WavesLadder",
-        description: "Piscina",
+        description: "Piscina Temperada",
       },
       {
         icon: "Fence",
         description: "Zona de trabajo",
+      },
+      {
+        icon: "Coffee",
+        description: "Cafetera",
+      },
+      {
+        icon: "Shirt",
+        description: "Ropa de Cama",
+      },
+      {
+        icon: "Aseo",
+        description: "Artículos de Aseo",
       },
     ],
   },
@@ -75,29 +90,40 @@ export const AIRBNBS: Airbnb[] = [
         description: "Acceso a la playa - Frente a la playa",
       },
       {
-        icon: "Wifi",
-        description: "Wifi",
+        icon: "Rows4",
+        description: "Parrilla",
       },
       {
-        icon: "CarFront",
-        description: "Descripción del servicio 3",
+        icon: "Sun",
+        description: "Terraza",
       },
       {
         icon: "Video",
-        description:
-          "Cámaras de seguridad en la parte exterior de la propiedad",
+        description: "Seguridad garantizada en el edificio",
       },
       {
         icon: "CookingPot",
-        description: "Cocina",
+        description: "Cocina Equipada",
       },
       {
         icon: "WavesLadder",
-        description: "Piscina",
+        description: "Piscina Grande",
       },
       {
         icon: "Fence",
         description: "Zona de trabajo",
+      },
+      {
+        icon: "Coffee",
+        description: "Cafetera",
+      },
+      {
+        icon: "Shirt",
+        description: "Ropa de Cama",
+      },
+      {
+        icon: "Aseo",
+        description: "Artículos de Aseo",
       },
     ],
   },

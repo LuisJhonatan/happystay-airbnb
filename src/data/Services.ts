@@ -7,7 +7,7 @@ interface Service {
 export const SERVICES: Service[] = [
   {
     name: "Menú en Casa",
-    image: "/images/services/service-1.svg",
+    image: "/images/services/service-1.png",
     description:
       "Disfruta de nuestra carta con comida y bebidas exclusivas para huéspedes.",
   },

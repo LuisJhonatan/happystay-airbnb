@@ -8,7 +8,12 @@ import {
   CookingPot,
   WavesLadder,
   Fence,
-  HelpCircle, // Importa el ícono por defecto
+  HelpCircle,
+  AirVent,
+  Rows4,
+  Sun,
+  Shirt,
+  Coffee,
 } from "lucide-react";
 import { Button } from "./button";
 import { useState } from "react";
@@ -35,6 +40,11 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } =
     CookingPot: CookingPot,
     WavesLadder: WavesLadder,
     Fence: Fence,
+    AirVent: AirVent,
+    Rows4: Rows4,
+    Sun : Sun,
+    Shirt: Shirt,
+    Coffee: Coffee,
   };
 
 export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
