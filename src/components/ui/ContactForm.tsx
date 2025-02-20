@@ -8,6 +8,7 @@ interface ContactFormData {
 }
 
 export default function ContactForm() {
+  const email = process.env.NEXT_PUBLIC_EMAIL;
   const {
     register,
     handleSubmit,
@@ -25,7 +26,7 @@ export default function ContactForm() {
       </h2>
       <form
         className="space-y-6"
-        action="https://formsubmit.co/a1f814e4de679fd20a3d300069daabd0"
+        action={`https://formsubmit.co/${email}`}
         method="POST"
         target="_blank"
       >
