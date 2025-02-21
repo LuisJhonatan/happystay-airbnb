@@ -21,9 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main
-      className="min-h-screen"
-    >
+    <main className="min-h-screen">
       <Nav scrollToSection={scrollToSection} />
       {/* Hero Section */}
       <HomeSection scrollToSection={scrollToSection} />
@@ -39,7 +37,7 @@ export default function Home() {
       <Footer scrollToSection={scrollToSection} />
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/51989856864"
+        href="https://wa.me/51989856864?text=%C2%A1Hola!%20deseo%20reservar%20el%20Airbnb%20para%20las%20fechas..."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-all z-50 flex items-center justify-center"

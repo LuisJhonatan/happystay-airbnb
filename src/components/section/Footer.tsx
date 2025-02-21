@@ -94,7 +94,7 @@ export default function Footer({
               <li>
                 WhastApp:{" "}
                 <a
-                  href="https://wa.me/51989856864"
+                  href="https://wa.me/51989856864?text=%C2%A1Hola!%20deseo%20reservar%20el%20Airbnb%20para%20las%20fechas..."
                   target="_blank"
                   rel="noreferrer"
                   className="text-gray-400 hover:text-white"

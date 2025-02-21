@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "HappyStay - Encuentra el Airbnb perfecto",
     description:
       "Descubre alojamientos cómodos y bien ubicados para una estancia inolvidable. ¡Bienvenido a HappyStay!",
-    url: "https://www.happystay.com",
+    url: "https://www.happystay.pe",
     type: "website",
   },
   twitter: {
@@ -37,6 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta charSet="UTF-8" />
+        <link rel="icon" href="/images/favicon.ico" />
         <MetaPixel />
       </head>
       <body className={inter.className}>{children}</body>
