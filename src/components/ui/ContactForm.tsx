@@ -25,6 +25,11 @@ export default function ContactForm() {
         method="POST"
         target="_blank"
       >
+        <input
+          type="hidden"
+          name="_next"
+          value="https://www.happystay.pe/email-sent"
+        ></input>
         <div>
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
