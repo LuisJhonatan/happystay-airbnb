@@ -18,7 +18,6 @@ import {
 import { Button } from "./button";
 import { useState } from "react";
 import { ImageCarousel } from "./ImageCarousel";
-import { event } from "@/lib/pixel";
 
 interface Service {
   icon: string;
@@ -51,7 +50,7 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } =
 export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
   const handleAirbnbClick = () => {
-    event("airbnb_click", { airbnb_name: airbnb.name });
+    
 
     window.open(airbnb.link, "_blank");
   };
