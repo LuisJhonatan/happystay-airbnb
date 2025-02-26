@@ -46,17 +46,17 @@ export default function ContactForm({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 sm:p-6 md:p-8">
-      <div className="w-full max-w-lg bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8 h-[80%] overflow-y-auto">
+      <div className="w-full max-w-lg bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8 h-[80vh] md:h-[70vh] 2xl:h-[60vh] overflow-y-auto">
         <button
           onClick={onClose}
           className="text-2xl absolute top-4 right-4 text-gray-500 hover:text-gray-700"
         >
           X
         </button>
-        <h2 className="text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium my-8">
+        <h2 className="text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium my-6">
           {name}
         </h2>
-        <h3 className="text-primary text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium my-8">
+        <h3 className="text-primary text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium my-4">
           Desde S/. 850.00
         </h3>
 
