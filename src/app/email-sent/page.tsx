@@ -9,7 +9,8 @@ import { useRouter } from "next/navigation";
 function isValidUrl(url: string) {
   try {
     const parsedUrl = new URL(url);
-    return parsedUrl.hostname === "www.airbnb.com.pe";
+    const allowedDomains = ["www.airbnb.com.pe", "airbnb.com.pe"];
+    return allowedDomains.includes(parsedUrl.hostname);
   } catch {
     return false;
   }
