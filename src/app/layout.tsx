@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     "Descubre alojamientos cómodos y bien ubicados para una estancia inolvidable. ¡Bienvenido a HappyStay!",
   keywords: "Airbnb, alojamientos, viajes, vacaciones, apartamentos, HappyStay",
   authors: [{ name: "HappyStay" }],
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     title: "HappyStay - Encuentra el Airbnb perfecto",
@@ -28,6 +27,9 @@ export const metadata: Metadata = {
       "Descubre alojamientos cómodos y bien ubicados para una estancia inolvidable. ¡Bienvenido a HappyStay!",
   },
 };
+
+export const viewport = "width=device-width, initial-scale=1.0";
+
 
 export default function RootLayout({
   children,

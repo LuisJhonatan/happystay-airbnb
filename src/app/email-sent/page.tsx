@@ -2,21 +2,12 @@
 
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 export default function EmailSent() {
   const [isVisible, setIsVisible] = useState(false);
-  const searchParams = useSearchParams();
-  const link = searchParams.get("link") || "/";
-  const router = useRouter();
-
-  useEffect(() => {
-    if (link === "/") {
-      router.push("/");
-    }
-  }, [link, router]);
 
   useEffect(() => {
     setIsVisible(true);
@@ -44,26 +35,44 @@ export default function EmailSent() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <Link
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-center group inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-medium hover:primary transition-all duration-200 transform hover:scale-105"
-          >
-            Más acerca del Airbnb
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Link>
-
-          <Link
-            href="/"
-            className="text-center group inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-medium hover:primary transition-all duration-200 transform hover:scale-105"
-          >
-            Volver a la página principal
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <EmailSentContent />
+        </Suspense>
       </div>
     </main>
+  );
+}
+
+function EmailSentContent() {
+  const searchParams = useSearchParams();
+  const link = searchParams.get("link") || "/";
+  const router = useRouter();
+
+  useEffect(() => {
+    if (link === "/") {
+      router.push("/");
+    }
+  }, [link, router]);
+
+  return (
+    <div className="flex flex-col gap-4">
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-center group inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-medium hover:primary transition-all duration-200 transform hover:scale-105"
+      >
+        Más acerca del Airbnb
+        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+      </Link>
+
+      <Link
+        href="/"
+        className="text-center group inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-medium hover:primary transition-all duration-200 transform hover:scale-105"
+      >
+        Volver a la página principal
+        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+      </Link>
+    </div>
   );
 }
