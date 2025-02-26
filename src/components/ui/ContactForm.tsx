@@ -46,7 +46,7 @@ export default function ContactForm({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 sm:p-6 md:p-8">
-      <div className="w-full max-w-lg bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8 h-[90%] sm:h-auto overflow-y-auto">
+      <div className="w-full max-w-lg bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8 h-[90%] overflow-y-auto">
         <button
           onClick={onClose}
           className="text-2xl absolute top-4 right-4 text-gray-500 hover:text-gray-700"
