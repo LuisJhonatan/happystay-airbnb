@@ -1,7 +1,6 @@
 import { Mail, Phone, Instagram } from "lucide-react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
-import ContactForm from "../ui/ContactForm";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -11,14 +10,17 @@ export default function ContactPage() {
       id="contact"
       className={`min-h-screen bg-secondary relative p-4 flex items-center justify-center ${roboto.className}`}
     >
-      <div className="max-w-[1200px] flex flex-col lg:flex-row  items-center lg:justify-around relative z-10 mx-auto lg:grid md:grid-cols-2 lg:gap-8">
+      <div className="max-w-7xl flex flex-col py-8">
+        <h2 className="text-primaryText text-2xl text-center md:text-3xl lg:text-4xl xl:text-[36px] font-medium mt-16 lg:mt-4">
+          Contáctanos
+        </h2>
         <div className="py-4 space-y-8">
           <Image
             src="/images/imagen-contacto.png"
             alt="Pareja trabajando junta"
             width={500}
             height={500}
-            className="shadow-lg relative lg:left-[25%] lg:z-0"
+            className="shadow-lg "
           />
 
           <div>
@@ -122,8 +124,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-
-        <ContactForm />
       </div>
       <div className="w-full h-8 absolute top-0 bg-primary "></div>
     </section>

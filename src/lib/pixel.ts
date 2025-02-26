@@ -13,3 +13,7 @@ export const pageview = () => {
 export const event = (name: string, options: Record<string, unknown> = {}) => {
   window.fbq("track", name, options);
 };
+
+export const viewContent = () => {
+  window.fbq("track", "ViewContent");
+};

@@ -18,6 +18,7 @@ import {
 import { Button } from "./button";
 import { useState } from "react";
 import { ImageCarousel } from "./ImageCarousel";
+import ContactForm from "./ContactForm";
 
 interface Service {
   icon: string;
@@ -49,11 +50,7 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } =
 
 export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
-  const handleAirbnbClick = () => {
-    
-
-    window.open(airbnb.link, "_blank");
-  };
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <>
@@ -61,7 +58,7 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
         <h2 className="text-xl lg:text-2xl font-semibold">{airbnb.name}</h2>{" "}
       </div>
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 pb-8 px-4 items-center lg:items-start ">
-        <div className="w-10/12 lg:w-1/2 rounded-xl shadow-xl overflow-hidden">
+        <div className="relative w-10/12 lg:w-1/2 rounded-xl shadow-xl overflow-hidden">
           <Image
             src={airbnb.images[2]}
             alt={airbnb.name}
@@ -70,6 +67,9 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
             className="w-full h-auto rounded-xl shadow-lg transition-transform duration-300 lg:hover:scale-125"
             priority
           />
+          <h3 className="absolute top-4 left-4 text-primary text-2xl lg:text-3xl font-bold">
+            Desde S/. 850.00
+          </h3>
         </div>
         <div className="w-10/12 lg:w-1/2">
           <h3 className="text-lg lg:text-2xl font-semibold mt-4 lg:mt-0">
@@ -88,14 +88,20 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
               );
             })}
           </div>
-          <div className="flex gap-8 mt-4">
+
+          <div className="flex gap-2 lg:gap-8 mt-4 w-full">
             <Button
-              className=" text-white"
+              className="bg-blue-600 text-white text-base px-6 rounded-full"
               onClick={() => setIsCarouselOpen(true)}
             >
               Ver fotos...
             </Button>
-            <Button className=" text-white " onClick={handleAirbnbClick}>
+            <Button
+              className="text-lg text-white px-8 rounded-full"
+              onClick={() => {
+                setIsFormOpen(true);
+              }}
+            >
               Ir al Airbnb...
             </Button>
           </div>
@@ -105,6 +111,12 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
         images={airbnb.images}
         isOpen={isCarouselOpen}
         onClose={() => setIsCarouselOpen(false)}
+      />
+      <ContactForm
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        name = {airbnb.name}
+        link={airbnb.link}
       />
     </>
   );
