@@ -6,6 +6,15 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
+function isValidUrl(url: string) {
+  try {
+    const parsedUrl = new URL(url);
+    return parsedUrl.hostname === "www.airbnb.com.pe";
+  } catch {
+    return false;
+  }
+}
+
 export default function EmailSent() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -49,7 +58,7 @@ function EmailSentContent() {
   const router = useRouter();
 
   useEffect(() => {
-    if (link === "/") {
+    if (link === "/" || !isValidUrl(link)) {
       router.push("/");
     }
   }, [link, router]);
