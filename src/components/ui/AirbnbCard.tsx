@@ -67,7 +67,7 @@ export default function AirbnbCard({ airbnb }: { airbnb: Airbnb }) {
             className="w-full h-auto rounded-xl shadow-lg transition-transform duration-300 lg:hover:scale-125"
             priority
           />
-          <h3 className="absolute top-4 left-4 text-primary text-2xl lg:text-3xl font-bold">
+          <h3 className="absolute top-4 right-4 text-primary text-2xl lg:text-3xl font-bold">
             Desde S/. 850.00
           </h3>
         </div>
