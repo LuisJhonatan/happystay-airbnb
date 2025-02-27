@@ -44,6 +44,7 @@ export default function ContactForm({
 
   if (!isOpen) return null;
 
+  
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-lg bg-white text-primaryText relative z-10 p-4 rounded-lg shadow-lg my-8 h-[80vh] md:h-[70vh] 2xl:h-[60vh] overflow-y-auto">
