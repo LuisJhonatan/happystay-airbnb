@@ -17,3 +17,7 @@ export const event = (name: string, options: Record<string, unknown> = {}) => {
 export const viewContent = () => {
   window.fbq("track", "ViewContent");
 };
+
+export const trackLead = () => {
+  window.fbq("track", "Lead");
+};

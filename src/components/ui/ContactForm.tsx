@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import * as z from "zod";
+import { trackLead } from "@/lib/pixel";
 
 const schema = z.object({
   name: z.string().nonempty("Este campo es obligatorio"),
@@ -155,6 +156,7 @@ export default function ContactForm({
           <button
             type="submit"
             className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+            onClick={trackLead}
           >
             Enviar mensaje
             <Mail className="w-4 h-4" />
